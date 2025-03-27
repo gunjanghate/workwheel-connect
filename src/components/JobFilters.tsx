@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   Select, 
@@ -9,6 +8,7 @@ import {
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { JobFilter } from '@/types';
 import { Search, SlidersHorizontal, X } from 'lucide-react';
 import { categories, locations, jobTypes } from '@/data/mockData';
