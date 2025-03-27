@@ -12,16 +12,7 @@ WorkWheel Connect is a comprehensive online platform designed to empower small a
 
 ## Tech Stack
 - **Frontend:** React.js-vite
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB
-- **Authentication:** Firebase Auth
 - **Deployment:** Vercel/Heroku
-
-## Installation
-### Prerequisites
-- Node.js installed
-- MongoDB setup (local/cloud)
-- Firebase project configured (if using Firebase Auth)
 
 ### Steps to Run Locally
 1. Clone the repository:
@@ -36,16 +27,13 @@ WorkWheel Connect is a comprehensive online platform designed to empower small a
    ```sh
    npm install
    ```
-4. Create a `.env` file in the root directory and add required environment variables:
-   ```env
-   MONGO_URI=your_mongodb_connection_string
-   FIREBASE_API_KEY=your_firebase_api_key
+
    ```
-5. Start the development server:
+4. Start the development server:
    ```sh
    npm run dev
    ```
-6. Open your browser and go to `http://localhost:3000`
+5. Open your browser and go to `http://localhost:3000`
 
 ## Contributing
 We welcome contributions! To contribute:
