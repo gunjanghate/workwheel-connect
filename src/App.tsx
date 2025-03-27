@@ -5,6 +5,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/context/AuthContext";
+import { ThemeProvider } from "next-themes";
+import ParticleBackground from "@/components/ParticleBackground";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -21,47 +23,50 @@ const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <AuthProvider>
-      <TooltipProvider>
-        <Toaster />
-        <SonnerToaster />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Index />} />
-              <Route path="jobs" element={<JobsPage />} />
-              <Route path="jobs/:id" element={<JobDetail />} />
-              <Route path="login" element={<LoginPage />} />
-              <Route 
-                path="profile" 
-                element={
-                  <ProtectedRoute>
-                    <ProfilePage />
-                  </ProtectedRoute>
-                } 
-              />
-              <Route 
-                path="admin" 
-                element={
-                  <ProtectedRoute requiredRole="admin">
-                    <AdminPanel />
-                  </ProtectedRoute>
-                } 
-              />
-              <Route 
-                path="add-job" 
-                element={
-                  <ProtectedRoute requiredRole="employer">
-                    <AddJobPage />
-                  </ProtectedRoute>
-                } 
-              />
-              <Route path="*" element={<NotFound />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </AuthProvider>
+    <ThemeProvider defaultTheme="dark" enableSystem={false}>
+      <AuthProvider>
+        <TooltipProvider>
+          <ParticleBackground />
+          <Toaster />
+          <SonnerToaster />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Index />} />
+                <Route path="jobs" element={<JobsPage />} />
+                <Route path="jobs/:id" element={<JobDetail />} />
+                <Route path="login" element={<LoginPage />} />
+                <Route 
+                  path="profile" 
+                  element={
+                    <ProtectedRoute>
+                      <ProfilePage />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="admin" 
+                  element={
+                    <ProtectedRoute requiredRole="admin">
+                      <AdminPanel />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route 
+                  path="add-job" 
+                  element={
+                    <ProtectedRoute requiredRole="employer">
+                      <AddJobPage />
+                    </ProtectedRoute>
+                  } 
+                />
+                <Route path="*" element={<NotFound />} />
+              </Route>
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </AuthProvider>
+    </ThemeProvider>
   </QueryClientProvider>
 );
 
