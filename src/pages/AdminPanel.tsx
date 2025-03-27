@@ -24,7 +24,7 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 import { Search, Edit, Trash2, Eye, MoreHorizontal } from 'lucide-react';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 import {
   AlertDialog,
   AlertDialogAction,

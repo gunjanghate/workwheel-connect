@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { users } from '@/data/mockData';
 import { useAuth } from '@/context/AuthContext';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 import { Briefcase } from 'lucide-react';
 
 interface DemoAccountProps {

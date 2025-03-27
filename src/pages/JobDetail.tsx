@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { useAuth } from '@/context/AuthContext';
 import { Calendar, MapPin, Clock, Briefcase, Building, ArrowLeft, Share2 } from 'lucide-react';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 import {
   Dialog,
   DialogContent,

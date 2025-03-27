@@ -13,7 +13,7 @@ import {
   SelectValue 
 } from '@/components/ui/select';
 import { categories, jobTypes, locations } from '@/data/mockData';
-import { toast } from '@/components/ui/sonner';
+import { toast } from 'sonner';
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
